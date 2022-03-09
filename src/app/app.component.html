@@ -1,0 +1,31 @@
+<div class="container">
+<h3><u>Assignment 28 Feb</u></h3>
+  <div class="center-div">
+    <h1 class="text-center">Calculator App</h1>
+    <div>
+      <input type="text" value="{{result}}" class="form-control">
+    </div>
+    <div class="my-3">
+      <button *ngFor="let a of allButtons" class="btn btn-warning" (click)="callExpression(a)">
+        {{a}}
+      </button>
+      <button *ngFor="let b of buttons" class="btn btn-primary" (click)="callExpression(b)">
+        {{b}}
+      </button>
+
+    </div>
+<hr>
+
+    <!-- Check Box Example -->
+    <div class="center-div">
+      <h1 class="text-center">Check List</h1>
+
+      <tr *ngFor="let l of Course">
+        <input type="checkbox" (change)="onChange(l.Fees,$event)" [value]="l.Fees">
+        <td>{{l.CourseName}}</td>
+      </tr>
+      <strong>Total: {{sum}}</strong>
+    </div>
+
+
+  </div>
